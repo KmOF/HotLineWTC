@@ -8,15 +8,19 @@ public class Player : MonoBehaviour {
 	public GameObject player;
 	public static float playerY;
 	public static float playerX;
+	public Cam cam;
 
 	// Use this for initialization
 	void Start () {
+		
 	}
 		
 	// Update is called once per frame
 	void Update () {
-		moveCursor ();
-		movePlayer ();
+		if (cam.isGameRunning == true) {
+			moveCursor ();
+			movePlayer ();
+		}
 	}
 
 	void movePlayer(){
