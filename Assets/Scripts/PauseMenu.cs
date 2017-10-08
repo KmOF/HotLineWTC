@@ -4,11 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
+	public Cam cam;
+
 	public void QuitButton(){
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene ("MainMenu");
 	}
 
 	public void ContinueButton(){
-		
+		cam.isGameRunning = true;
+		cam.resume();
+		Debug.Log ("Resume");
 	}
 }

@@ -29,5 +29,13 @@ public class Cam : MonoBehaviour {
 				isGameRunning = true;
 			}
 		}
+
+
+	}
+
+	public void resume(){
+		if (isGameRunning == true) {
+			PauseMenu.SetActive (false);
+		}
 	}
 }
