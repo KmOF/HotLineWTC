@@ -6,6 +6,7 @@ public class Cam : MonoBehaviour {
 	
 	public GameObject PauseMenu;
 	public bool isGameRunning;
+	public GameObject Canvas;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,8 @@ public class Cam : MonoBehaviour {
 	}
 
 	void pauseState(){
+		PauseMenu.transform.localPosition = new Vector3 (Player.playerX, Player.playerY, 0);
+		Canvas.transform.localPosition = new Vector3 (Player.playerX, Player.playerY, 0);
 		if (Input.GetKey (KeyCode.P)) {
 			if (isGameRunning == true) {
 				PauseMenu.SetActive (true);

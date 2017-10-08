@@ -17,7 +17,10 @@ public class Player : MonoBehaviour {
 		
 	// Update is called once per frame
 	void Update () {
-		if (cam.isGameRunning == true) {
+		if (playerY < -12.3863f){
+			
+		}
+		else if (cam.isGameRunning == true) {
 			moveCursor ();
 			movePlayer ();
 		}
